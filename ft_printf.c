@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/09 11:56:52 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/09 12:04:47 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,34 +27,6 @@ static char	*ft_type(char c)
 	if ((c == 'u') || (c == 'x' ) || (c == 'X' ))
 		return ("unsigned int");
 }
-
-
-
-static int	ft_putdec(int d)
-{
-	
-}
-
-static int	ft_putint10(int	i)
-{
-	
-}
-
-static int	ft_putundec(unsigned int u)
-{
-	
-}
-
-static int	ft_putlowhexa(unsigned int x)
-{
-	
-}
-
-static int	ft_putuphexa(unsigned int X)
-{
-	
-}
-
 
 static int	ft_putpercent(char *perc)
 {
@@ -103,6 +75,46 @@ static int	ft_puthexa(void *p)
 
 	i = 0;
 	return (i);	
+}
+
+static int	ft_putdec(int d)
+{
+	int	i;
+
+	i = 0;
+	return (i);		
+}
+
+static int	ft_putint10(int	i)
+{
+	int	i;
+
+	i = 0;
+	return (i);		
+}
+
+static int	ft_putundec(unsigned int u)
+{
+	int	i;
+
+	i = 0;
+	return (i);			
+}
+
+static int	ft_putlowhexa(unsigned int x)
+{
+	int	i;
+
+	i = 0;
+	return (i);		
+}
+
+static int	ft_putuphexa(unsigned int X)
+{
+	int	i;
+
+	i = 0;
+	return (i);		
 }
 
 static int	ft_findset(char	c, char *set)
@@ -164,8 +176,18 @@ int	ft_printf(const char *arg, ...)
 				ret = ret + ft_putchar (va_arg(elem, int));
 			if (symb == 's')
 				ret = ret + ft_putstr (va_arg(elem, char *));
-			if (c == 'p')
-				ret = ret + ft_puthexa(va_arg(elem,void *p));
+			if (symb == 'p')
+				ret = ret + ft_puthexa(va_arg(elem, void *));
+			if (symb == 'd')
+				ret = ret + ft_putdec(va_arg(elem, int));
+			if (symb == 'i')
+				ret = ret + ft_putint10(va_arg(elem, int));
+			if (symb == 'u')
+				ret = ret + ft_putundec(va_arg(elem, unsigned int));
+			if (symb == 'x')
+				ret = ret + ft_putlowhexa(va_arg(elem, unsigned int));
+			if (symb == 'X')
+				ret = ret + ft_putuphexa(va_arg(elem, unsigned int));
 			i = i + 2;
 		}
 	}
