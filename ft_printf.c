@@ -6,33 +6,29 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/09 10:42:53 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/09 11:56:52 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+/*
 #include "libft.h"
 #include "libftprintf.h"
-#include <unistd.h>
 
-static int	ft_putchar(char	c)
+static char	*ft_type(char c)
 {
-	char	ch;
-
-	ch = c;
-	write (1, &ch, 1);
+	if (c == 'c')
+		return ("char");
+	if (c == 's')
+		return ("char *");
+	if (c == 'p' )
+		return ("void *");
+	if ((c == 'd') || (c == 'i'))
+		return ("int");
+	if ((c == 'u') || (c == 'x' ) || (c == 'X' ))
+		return ("unsigned int");
 }
 
-/*
-static int	ft_putstr(char *s)
-{
-	
-}
 
-static int	ft_puthexa(void *p)
-{
-	
-}
 
 static int	ft_putdec(int d)
 {
@@ -59,22 +55,10 @@ static int	ft_putuphexa(unsigned int X)
 	
 }
 
-/*
+
 static int	ft_putpercent(char *perc)
 {
 
-}
-*/
-
-static int	ft_findset(char	c, char *set)
-{
-	int	i;
-
-	i = 0;
-	while (set[i])
-		if (set[i] == c)
-			return (1);
-	return (0);
 }
 
 static int	ft_incremi(const char *arg, int i)
@@ -87,6 +71,54 @@ static int	ft_incremi(const char *arg, int i)
 	}
 }
 
+
+
+*/
+#include <stdarg.h>
+#include <unistd.h>
+#include <string.h>
+
+static int	ft_putchar(int	c)
+{
+	write (1, &c, 1);
+	return (1);
+}
+
+static int	ft_putstr(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar(s[i]);
+		i ++;
+	}
+	return (i);
+}
+
+static int	ft_puthexa(void *p)
+{
+	int	i;
+
+	i = 0;
+	return (i);	
+}
+
+static int	ft_findset(char	c, char *set)
+{
+	int	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 static char ft_symb(const char *arg, int i)
 {
 	if (arg[i] && (arg[i] != '\%'))
@@ -94,20 +126,6 @@ static char ft_symb(const char *arg, int i)
 	if ((arg[i] == '\%') && (ft_findset(arg[i+1], "cspdiuxX\%") == 1))
 		return (arg[i+1]);
 	return ('c');
-}
-
-static char	*ft_type(char c)
-{
-	if (c == 'c')
-		return ("char");
-	if (c == 's')
-		return ("char *");
-	if (c == 'p' )
-		return ("void *");
-	if ((c == 'd') || (c == 'i'))
-		return ("int");
-	if ((c == 'u') || (c == 'x' ) || (c == 'X' ))
-		return ("unsigned int");
 }
 
 static int ft_isvar(const char *s, int i)
@@ -124,35 +142,41 @@ int	ft_printf(const char *arg, ...)
 {
 	va_list	elem;
 	int		i;
+	int		ret;
 	char	symb;
 
 	i = 	0;
 	symb =	'c';
+	ret = 0;
 	va_start(elem, arg);
 	while (arg[i])
 	{
 		if ((ft_isvar(arg, i) == 0) && arg[i])
 		{
 			ft_putchar(arg[i]);
-			i++;
+			i ++;
+			ret ++;
 		}
-		/*
-		while(elem)
+		if ((ft_isvar(arg, i) == 1) && arg[i] && arg[i+1])
 		{
-			type = ft_symb(arg, i);
-			ft_print_sth(va_arg(elem, char *), ft_type(symb));
-			i = i + ft_incremi(arg, i);
+			symb = ft_symb(arg, i);
+			if (symb == 'c')
+				ret = ret + ft_putchar (va_arg(elem, int));
+			if (symb == 's')
+				ret = ret + ft_putstr (va_arg(elem, char *));
+			if (c == 'p')
+				ret = ret + ft_puthexa(va_arg(elem,void *p));
+			i = i + 2;
 		}
-		*/
 	}
 	va_end(elem);
-	return (1);
+	return (ret);
 }
-
 
 #include <stdio.h>
 
 int	main(void)
 {
-	ft_printf("Test");
+	printf("%d\n",ft_printf("Test%s%c\n", "Code", 'a'));
+	printf("%d\n",printf("Test%s%c\n", "Code", 'a'));
 }
