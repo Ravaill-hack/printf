@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/11 10:43:19 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:25:37 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,12 @@ static int	ft_putstr(char *s)
 	return (i);
 }
 
-static int	ft_puthexa(void *p)
+static int	ft_putadrhexa(void *p)
 {
-	int		i;
-	
+	int	i;
+
 	i = 0;
-	return (i);	
+	return (i);		
 }
 
 static int	ft_putdec(int d)
@@ -104,22 +104,46 @@ static int	ft_putundec(unsigned int u)
 	int	i;
 
 	i = 0;
-	return (i);			
+	if (u >= 10)
+		i += ft_putundec(u / 10);		
+	ft_putchar(u % 10 + 48);
+	i ++;
+	return (i);	
 }
 
 static int	ft_putlowhexa(unsigned int x)
 {
-	int	i;
+	int			i;
+	long int	nbr;
+	char		*hexa;
 
 	i = 0;
+	nbr = (long int) x;
+	hexa = "0123456789abcdef";
+	if (nbr >= 16)
+	{
+		i += ft_putlowhexa(nbr / 16);		
+	}
+	ft_putchar(hexa[nbr % 16]);
+	i ++;
 	return (i);		
 }
 
 static int	ft_putuphexa(unsigned int X)
 {
-	int	i;
+	int			i;
+	long int	nbr;
+	char		*hexa;
 
 	i = 0;
+	nbr = (long int) X;
+	hexa = "0123456789ABCDEF";
+	if (nbr >= 16)
+	{
+		i += ft_putuphexa(nbr / 16);		
+	}
+	ft_putchar(hexa[nbr % 16]);
+	i ++;
 	return (i);		
 }
 
@@ -183,7 +207,7 @@ int	ft_printf(const char *arg, ...)
 			if (symb == 's')
 				ret = ret + ft_putstr (va_arg(elem, char *));
 			if (symb == 'p')
-				ret = ret + ft_puthexa(va_arg(elem, void *));
+				ret = ret + ft_putadrhexa(va_arg(elem, void *));
 			if (symb == 'd' || symb == 'i')
 				ret = ret + ft_putdec(va_arg(elem, int));
 			if (symb == 'u')
@@ -203,6 +227,6 @@ int	ft_printf(const char *arg, ...)
 
 int	main(void)
 {
-	printf("%d\n",printf("Test%s%c%i\n", "Code", 'a', 1234));
-	printf("%d\n",ft_printf("Test%s%c%i\n", "Code", 'a', 1234));
+	printf("%d\n",printf("Test%s%c%i%x%X%u\n", "Code", 'a', 1234, 12, 18, 14586));
+	printf("%d\n",ft_printf("Test%s%c%i%x%X%u\n", "Code", 'a', 1234, 12, 18, 14586));
 }
