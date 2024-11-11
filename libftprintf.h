@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:14:27 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/08 09:59:12 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/11 14:09:08 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@
 # include <stdarg.h>
 # include "libft.h"
 
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *arg, ...);
 
 #endif
