@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/09 12:04:47 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/11 10:43:19 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,26 +71,32 @@ static int	ft_putstr(char *s)
 
 static int	ft_puthexa(void *p)
 {
-	int	i;
-
+	int		i;
+	
 	i = 0;
 	return (i);	
 }
 
 static int	ft_putdec(int d)
 {
-	int	i;
+	int			i;
+	long int	nbr;
 
 	i = 0;
-	return (i);		
-}
-
-static int	ft_putint10(int	i)
-{
-	int	i;
-
-	i = 0;
-	return (i);		
+	nbr = (long int) d;
+	if (nbr < 0)
+	{
+		ft_putchar('-');
+		nbr = -nbr;
+		i ++;
+	}
+	if (nbr >= 10)
+	{
+		i += ft_putdec(nbr / 10);		
+	}
+	ft_putchar(nbr % 10 + 48);
+	i ++;
+	return (i);
 }
 
 static int	ft_putundec(unsigned int u)
@@ -178,10 +184,8 @@ int	ft_printf(const char *arg, ...)
 				ret = ret + ft_putstr (va_arg(elem, char *));
 			if (symb == 'p')
 				ret = ret + ft_puthexa(va_arg(elem, void *));
-			if (symb == 'd')
+			if (symb == 'd' || symb == 'i')
 				ret = ret + ft_putdec(va_arg(elem, int));
-			if (symb == 'i')
-				ret = ret + ft_putint10(va_arg(elem, int));
 			if (symb == 'u')
 				ret = ret + ft_putundec(va_arg(elem, unsigned int));
 			if (symb == 'x')
@@ -199,6 +203,6 @@ int	ft_printf(const char *arg, ...)
 
 int	main(void)
 {
-	printf("%d\n",ft_printf("Test%s%c\n", "Code", 'a'));
-	printf("%d\n",printf("Test%s%c\n", "Code", 'a'));
+	printf("%d\n",printf("Test%s%c%i\n", "Code", 'a', 1234));
+	printf("%d\n",ft_printf("Test%s%c%i\n", "Code", 'a', 1234));
 }
