@@ -3,7 +3,9 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS_FILES =  \
-	ft_printf.c \
+	ft_char.c \
+	ft_number.c \
+	ft_printf.c
 
 OBJS = $(SRCS_FILES:.c=.o)
 
