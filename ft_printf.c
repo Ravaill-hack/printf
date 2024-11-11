@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/11 15:44:13 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:20:11 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,8 +101,45 @@ int	ft_printf(const char *arg, ...)
 int	main(void)
 {
 	void	*Test = (void *)123456;
-
-	printf("%d\n",printf("Te%%st%s%p%p\n", "Je suis bete", NULL, Test));
-	printf("%d\n",ft_printf("Te%%st%s%p%p\n", "Je suis bete", NULL, Test));
+	printf("Test single character c\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %c", 'a'));
+	printf(" %d\n",printf("print_f    %c", 'a'));
+	printf("\n\n");
+	printf("Test string s\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %s", "Test"));
+	printf(" %d\n",printf("print_f    %s", "Test"));
+	printf("\n\n");
+	printf("Test adresse p\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %p", Test));
+	printf(" %d\n",printf("print_f    %p", Test));
+	printf("\n\n");
+	printf("Test decimal d\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %d", -1458));
+	printf(" %d\n",printf("print_f    %d", -1458));
+	printf("\n\n");
+	printf("Test integer i\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %i", -1458));
+	printf(" %d\n",printf("print_f    %i", -1458));
+	printf("\n\n");
+	printf("Test unsigned decimal u\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %u", 1458));
+	printf(" %d\n",printf("print_f    %u", 1458));
+	printf("\n\n");
+	printf("Test hexadecimal lowercase x\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %x", 44));
+	printf(" %d\n",printf("print_f    %x", 44));
+	printf("\n\n");
+	printf("Test hexadecimal uppercase X\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %X", 44));
+	printf(" %d\n",printf("print_f    %X", 44));
+	printf("\n\n");
+	printf("Test percent %%\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %%"));
+	printf(" %d\n",printf("print_f    %%"));
+	printf("\n\n");
+	printf("Tests divers \n\n");
+	printf(" %d\n",ft_printf("ft_printf  Te%%st%s%p%p\n", "Je suis", NULL, Test));
+	printf(" %d\n",printf("print_f    Te%%st%s%p%p\n", "Je suis", NULL, Test));
+	printf("\n\n");
 }
 */
