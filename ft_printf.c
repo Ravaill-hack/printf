@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/11 14:17:05 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:19:43 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ static int	ft_putstr(char *s)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return (ft_putstr("(null)"));
 	while (s[i])
 	{
 		ft_putchar(s[i]);
@@ -114,6 +116,8 @@ static int	ft_putadrhexa(void *p)
 	i = 0;
 	ptr = (unsigned long long) p;
 	hexa = "0123456789abcdef";
+	if (!ptr)
+		return (ft_putstr("(nil)"));
 	if (ptr == 0)
 	{
 		ft_putstr("0x0");
@@ -162,15 +166,37 @@ static int	ft_isvar(const char *s, int i)
 	return (0);
 }
 
+static int	ft_print_sth(va_list elem, const char *arg, char symb)
+{
+	int	ret;
+
+	ret = 0;
+	if (symb == 'c')
+		ret = ft_putchar (va_arg(elem, int));
+	if (symb == 's')
+		ret = ft_putstr (va_arg(elem, char *));
+	if (symb == 'p')
+		ret = ft_putadrhexa(va_arg(elem, void *));
+	if (symb == 'd' || symb == 'i')
+		ret = ft_putdec(va_arg(elem, int));
+	if (symb == 'u')
+		ret = ft_putundec(va_arg(elem, unsigned int));
+	if (symb == 'x')
+		ret = ft_putlowhexa(va_arg(elem, unsigned int));
+	if (symb == 'X')
+		ret = ft_putuphexa(va_arg(elem, unsigned int));
+	if (symb == '\%')
+		ret = ft_putchar('\%');
+	return (ret);
+}
+
 int	ft_printf(const char *arg, ...)
 {
 	va_list	elem;
 	int		i;
 	int		ret;
-	char	symb;
 
 	i = 0;
-	symb = 'c';
 	ret = 0;
 	va_start(elem, arg);
 	while (arg[i])
@@ -183,26 +209,7 @@ int	ft_printf(const char *arg, ...)
 		}
 		if ((ft_isvar(arg, i) == 1) && arg[i] && arg[i + 1])
 		{
-			symb = ft_symb(arg, i);
-			if (symb == 'c')
-				ret = ret + ft_putchar (va_arg(elem, int));
-			if (symb == 's')
-				ret = ret + ft_putstr (va_arg(elem, char *));
-			if (symb == 'p')
-				ret = ret + ft_putadrhexa(va_arg(elem, void *));
-			if (symb == 'd' || symb == 'i')
-				ret = ret + ft_putdec(va_arg(elem, int));
-			if (symb == 'u')
-				ret = ret + ft_putundec(va_arg(elem, unsigned int));
-			if (symb == 'x')
-				ret = ret + ft_putlowhexa(va_arg(elem, unsigned int));
-			if (symb == 'X')
-				ret = ret + ft_putuphexa(va_arg(elem, unsigned int));
-			if (symb == '\%')
-			{
-				ret = ret + 1;
-				ft_putchar('\%');
-			}
+			ret += ft_print_sth(elem, arg, ft_symb(arg, i));
 			i = i + 2;
 		}
 	}
@@ -217,7 +224,7 @@ int	main(void)
 {
 	void	*Test = (void *)123456;
 
-	printf("%d\n",printf("Te%%st%s%p\n", "Code", Test));
-	printf("%d\n",ft_printf("Te%%st%s%p\n", "Code", Test));
+	printf("%d\n",printf("Te%%st%s%p\n", (char *)NULL, NULL));
+	printf("%d\n",ft_printf("Te%%st%s%p\n", (char *)NULL, NULL));
 }
 */
