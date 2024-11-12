@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/12 09:31:46 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:53:04 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ int	ft_printf(const char *arg, ...)
 }
 /*
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
@@ -140,6 +141,7 @@ int	main(void)
 	printf("Tests divers \n\n");
 	printf(" %d\n",ft_printf("ft_printf  Te%%st%s%p%p\n", "Jeux", NULL, Test));
 	printf(" %d\n",printf("print_f    Te%%st%s%p%p\n", "Jeux", NULL, Test));
-	printf("\n\n");
+	//printf(" %d\n",ft_printf("ft_printf  %p", LONG_MAX));
+	//printf(" %d\n",printf("print_f    %p", LONG_MAX));
 }
 */

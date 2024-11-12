@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:24:25 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/12 09:31:11 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:48:27 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,50 +46,46 @@ int	ft_putundec(unsigned int u)
 	return (i);
 }
 
-int	ft_putlowhexa(unsigned int x)
+int	ft_putlowhexa(unsigned long x)
 {
 	int			i;
-	long int	nbr;
 	char		*hexa;
 
 	i = 0;
-	nbr = (long int) x;
 	hexa = "0123456789abcdef";
-	if (nbr >= 16)
+	if (x >= 16)
 	{
-		i += ft_putlowhexa(nbr / 16);
+		i += ft_putlowhexa(x / 16);
 	}
-	ft_putchar(hexa[nbr % 16]);
+	ft_putchar(hexa[x % 16]);
 	i ++;
 	return (i);
 }
 
-int	ft_putuphexa(unsigned int X)
+int	ft_putuphexa(unsigned long X)
 {
 	int			i;
-	long int	nbr;
 	char		*hexa;
 
 	i = 0;
-	nbr = (long int) X;
 	hexa = "0123456789ABCDEF";
-	if (nbr >= 16)
+	if (X >= 16)
 	{
-		i += ft_putuphexa(nbr / 16);
+		i += ft_putuphexa(X / 16);
 	}
-	ft_putchar(hexa[nbr % 16]);
+	ft_putchar(hexa[X % 16]);
 	i ++;
 	return (i);
 }
 
 int	ft_putadrhexa(void *p)
 {
-	int					i;
-	unsigned long long	ptr;
-	char				*hexa;
+	int				i;
+	unsigned long	ptr;
+	char			*hexa;
 
 	i = 0;
-	ptr = (unsigned long long) p;
+	ptr = (unsigned long) p;
 	hexa = "0123456789abcdef";
 	if (!ptr)
 		return (ft_putstr("(nil)"));
@@ -101,7 +97,7 @@ int	ft_putadrhexa(void *p)
 	ft_putstr("0x");
 	if (ptr >= 16)
 	{
-		i += ft_putlowhexa(((unsigned int)ptr) / 16);
+		i += ft_putlowhexa((ptr) / 16);
 	}
 	ft_putchar(hexa[ptr % 16]);
 	i ++;
