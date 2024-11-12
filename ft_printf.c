@@ -6,11 +6,11 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/11 16:20:11 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:31:46 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_findset(char c, char *set)
 {
@@ -138,8 +138,8 @@ int	main(void)
 	printf(" %d\n",printf("print_f    %%"));
 	printf("\n\n");
 	printf("Tests divers \n\n");
-	printf(" %d\n",ft_printf("ft_printf  Te%%st%s%p%p\n", "Je suis", NULL, Test));
-	printf(" %d\n",printf("print_f    Te%%st%s%p%p\n", "Je suis", NULL, Test));
+	printf(" %d\n",ft_printf("ft_printf  Te%%st%s%p%p\n", "Jeux", NULL, Test));
+	printf(" %d\n",printf("print_f    Te%%st%s%p%p\n", "Jeux", NULL, Test));
 	printf("\n\n");
 }
 */

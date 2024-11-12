@@ -6,11 +6,11 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:24:22 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/11 15:38:00 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:31:17 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(int c)
 {

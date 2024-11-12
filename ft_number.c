@@ -6,11 +6,11 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:24:25 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/11 15:38:18 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:31:11 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putdec(int d)
 {
