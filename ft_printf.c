@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/15 09:25:44 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 10:04:52 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,8 @@ int	ft_printf(const char *arg, ...)
 	i = 0;
 	ret = 0;
 	va_start(elem, arg);
+	if (arg == NULL)
+		return (-1);
 	while (arg[i])
 	{
 		if ((ft_isvar(arg, i) == 0) && arg[i])
@@ -104,8 +106,8 @@ int	main(void)
 {
 	void	*Test = (void *)123456;
 	printf("Test single character c\n\n");
-	printf(" %d\n",ft_printf("ft_printf  %c", '%'));
-	printf(" %d\n",printf("print_f    %c", '%'));
+	printf(" %d\n",ft_printf("ft_printf  %c", 'a'));
+	printf(" %d\n",printf("print_f    %c", 'a'));
 	printf("\n\n");
 	printf("Test string s\n\n");
 	printf(" %d\n",ft_printf("ft_printf  %s", "%%Test"));
@@ -142,7 +144,13 @@ int	main(void)
 	printf("Tests divers \n\n");
 	printf(" %d\n",ft_printf("ft_printf  Te%%st%s%p%p\n", "Jeux", NULL, Test));
 	printf(" %d\n",printf("print_f    Te%%st%s%p%p\n", "Jeux", NULL, Test));
-	//printf(" %d\n",ft_printf("ft_printf  %p", LONG_MAX));
-	//printf(" %d\n",printf("print_f    %p", LONG_MAX));
+	printf(" %d\n",ft_printf("ft_printf  %p", (void *)LONG_MAX));
+	printf(" %d\n",printf("print_f    %p", (void *)LONG_MAX));
+	printf("\n\n");
+	printf(" %d\n",ft_printf(NULL));
+	printf(" %d\n",printf(NULL));
+	printf("\n\n");
+	printf(" %d\n",ft_printf("ft_printf  %s", (char *)NULL));
+	printf(" %d\n",printf("print_f    %s", (char *)NULL));
 }
 */
