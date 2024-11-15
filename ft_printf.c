@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/15 12:17:26 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:25:49 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ int	ft_printf(const char *arg, ...)
 	va_end(elem);
 	return (ret);
 }
-
 /*
 #include <stdio.h>
 #include <limits.h>

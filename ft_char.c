@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:24:22 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/15 12:14:57 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:26:08 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,4 @@ int	ft_putstr(char *s)
 		i ++;
 	}
 	return (i);
-}
-
-void	ft_cpy(char *dest, char *src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
 }

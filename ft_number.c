@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:24:25 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/15 12:15:58 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:22:14 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,13 @@ int	ft_putundec(unsigned int u)
 int	ft_putlowhexa(unsigned long x)
 {
 	int			i;
-	char		hexa[16];
 
 	i = 0;
-	ft_cpy(hexa, "0123456789abcdef");
 	if (x >= 16)
 	{
 		i += ft_putlowhexa(x / 16);
 	}
-	ft_putchar(hexa[x % 16]);
+	ft_putchar(HEXALOW[x % 16]);
 	i ++;
 	return (i);
 }
@@ -65,15 +63,13 @@ int	ft_putlowhexa(unsigned long x)
 int	ft_putuphexa(unsigned long X)
 {
 	int			i;
-	char		hexa[16];
 
 	i = 0;
-	ft_cpy(hexa, "0123456789abcdef");
 	if (X >= 16)
 	{
 		i += ft_putuphexa(X / 16);
 	}
-	ft_putchar(hexa[X % 16]);
+	ft_putchar(HEXAUP[X % 16]);
 	i ++;
 	return (i);
 }
@@ -82,24 +78,12 @@ int	ft_putadrhexa(void *p)
 {
 	int				i;
 	unsigned long	ptr;
-	char			hexa[16];
 
 	i = 0;
 	ptr = (unsigned long) p;
-	ft_cpy(hexa, "0123456789abcdef");
 	if (!ptr)
 		return (ft_putstr("(nil)"));
-	if (ptr == 0)
-	{
-		ft_putstr("0x0");
-		return (3);
-	}
-	ft_putstr("0x");
-	if (ptr >= 16)
-	{
-		i += ft_putlowhexa((ptr) / 16);
-	}
-	ft_putchar(hexa[ptr % 16]);
-	i ++;
-	return (i + 2);
+	i = ft_putstr("0x");
+	i = i + ft_putlowhexa(ptr);
+	return (i);
 }
