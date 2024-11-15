@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/15 17:25:49 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:41:51 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ int	ft_print_sth(va_list elem, char symb)
 	if (symb == 'u')
 		ret = ft_putundec(va_arg(elem, unsigned int));
 	if (symb == 'x')
-		ret = ft_putlowhexa(va_arg(elem, unsigned long));
+		ret = ft_putlowhexa(va_arg(elem, unsigned int));
 	if (symb == 'X')
-		ret = ft_putuphexa(va_arg(elem, unsigned long));
+		ret = ft_putuphexa(va_arg(elem, unsigned int));
 	if (symb == '%')
 		ret = ft_putchar('%');
 	return (ret);
@@ -97,7 +97,7 @@ int	ft_printf(const char *arg, ...)
 	va_end(elem);
 	return (ret);
 }
-/*
+
 #include <stdio.h>
 #include <limits.h>
 
@@ -152,4 +152,4 @@ int	main(void)
 	printf(" %d\n",ft_printf("ft_printf  %s", (char *)NULL));
 	printf(" %d\n",printf("print_f    %s", (char *)NULL));
 }
-*/
+

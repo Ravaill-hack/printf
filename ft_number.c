@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:24:25 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/15 17:22:14 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:44:06 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,29 +46,25 @@ int	ft_putundec(unsigned int u)
 	return (i);
 }
 
-int	ft_putlowhexa(unsigned long x)
+int	ft_putlowhexa(unsigned int x)
 {
-	int			i;
+	int	i;
 
 	i = 0;
 	if (x >= 16)
-	{
 		i += ft_putlowhexa(x / 16);
-	}
 	ft_putchar(HEXALOW[x % 16]);
 	i ++;
 	return (i);
 }
 
-int	ft_putuphexa(unsigned long X)
+int	ft_putuphexa(unsigned int X)
 {
-	int			i;
+	int	i;
 
 	i = 0;
 	if (X >= 16)
-	{
 		i += ft_putuphexa(X / 16);
-	}
 	ft_putchar(HEXAUP[X % 16]);
 	i ++;
 	return (i);
