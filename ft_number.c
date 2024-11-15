@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_number.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:24:25 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/15 17:44:06 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 20:35:03 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,16 +70,14 @@ int	ft_putuphexa(unsigned int X)
 	return (i);
 }
 
-int	ft_putadrhexa(void *p)
+int	ft_adrhexa(unsigned long X)
 {
-	int				i;
-	unsigned long	ptr;
+	int	i;
 
 	i = 0;
-	ptr = (unsigned long) p;
-	if (!ptr)
-		return (ft_putstr("(nil)"));
-	i = ft_putstr("0x");
-	i = i + ft_putlowhexa(ptr);
+	if (X >= 16)
+		i += ft_adrhexa(X / 16);
+	ft_putchar(HEXALOW[X % 16]);
+	i ++;
 	return (i);
 }

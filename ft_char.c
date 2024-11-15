@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_char.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:24:22 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/15 17:26:08 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 20:34:48 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,19 @@ int	ft_putstr(char *s)
 		ft_putchar(s[i]);
 		i ++;
 	}
+	return (i);
+}
+
+int	ft_putadr(void *p)
+{
+	int				i;
+	unsigned long	ptr;
+
+	i = 0;
+	ptr = (unsigned long)p;
+	if (!p)
+		return (ft_putstr("(nil)"));
+	i = ft_putstr("0x");
+	i = i + ft_adrhexa(ptr);
 	return (i);
 }
