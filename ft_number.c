@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:24:25 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/12 09:48:27 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:15:58 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ int	ft_putundec(unsigned int u)
 int	ft_putlowhexa(unsigned long x)
 {
 	int			i;
-	char		*hexa;
+	char		hexa[16];
 
 	i = 0;
-	hexa = "0123456789abcdef";
+	ft_cpy(hexa, "0123456789abcdef");
 	if (x >= 16)
 	{
 		i += ft_putlowhexa(x / 16);
@@ -65,10 +65,10 @@ int	ft_putlowhexa(unsigned long x)
 int	ft_putuphexa(unsigned long X)
 {
 	int			i;
-	char		*hexa;
+	char		hexa[16];
 
 	i = 0;
-	hexa = "0123456789ABCDEF";
+	ft_cpy(hexa, "0123456789abcdef");
 	if (X >= 16)
 	{
 		i += ft_putuphexa(X / 16);
@@ -82,11 +82,11 @@ int	ft_putadrhexa(void *p)
 {
 	int				i;
 	unsigned long	ptr;
-	char			*hexa;
+	char			hexa[16];
 
 	i = 0;
 	ptr = (unsigned long) p;
-	hexa = "0123456789abcdef";
+	ft_cpy(hexa, "0123456789abcdef");
 	if (!ptr)
 		return (ft_putstr("(nil)"));
 	if (ptr == 0)

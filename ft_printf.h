@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:14:27 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/12 09:49:49 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:15:13 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	ft_symb(const char *arg, int i);
 int		ft_isvar(const char *s, int i);
 int		ft_print_sth(va_list elem, char symb);
 int		ft_printf(const char *arg, ...);
+void	ft_cpy(char *dest, char *src);
 
 #endif
