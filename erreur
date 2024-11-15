@@ -1,0 +1,233 @@
+[Mandatory]
+category: c
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 
+category: s
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+category: p
+1.KO 2.KO 3.KO 4.KO 5.KO 6.KO 7.KO 8.KO 9.OK 
+category: d
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 20.OK 21.OK 22.OK 23.OK 24.OK 25.OK 26.OK 27.OK 28.OK 29.OK 
+category: i
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 20.OK 21.OK 22.OK 23.OK 24.OK 25.OK 26.OK 27.OK 28.OK 29.OK 
+category: u
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 20.OK 21.OK 22.OK 23.OK 24.OK 25.OK 26.OK 27.OK 28.OK 29.OK 
+category: x
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 20.OK 21.OK 22.OK 23.OK 24.KO 25.KO 26.OK 27.KO 28.KO ==1715758== Conditional jump or move depends on uninitialised value(s)
+==1715758==    at 0x40859B: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408041: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x407885: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1715758==    by 0x405599: main (x_test.cpp:54)
+==1715758==  Uninitialised value was created by a stack allocation
+==1715758==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715758== 
+==1715758== Conditional jump or move depends on uninitialised value(s)
+==1715758==    at 0x40859B: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408041: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x407885: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1715758==    by 0x405599: main (x_test.cpp:54)
+==1715758==  Uninitialised value was created by a stack allocation
+==1715758==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715758== 
+==1715758== Conditional jump or move depends on uninitialised value(s)
+==1715758==    at 0x40859B: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408041: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x407885: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1715758==    by 0x405599: main (x_test.cpp:54)
+==1715758==  Uninitialised value was created by a stack allocation
+==1715758==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715758== 
+==1715758== Conditional jump or move depends on uninitialised value(s)
+==1715758==    at 0x40859B: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408041: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x407885: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1715758==    by 0x405599: main (x_test.cpp:54)
+==1715758==  Uninitialised value was created by a stack allocation
+==1715758==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715758== 
+==1715758== Use of uninitialised value of size 8
+==1715758==    at 0x4085BC: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x4085AD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408041: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/x_test)
+==1715758==  Uninitialised value was created by a stack allocation
+==1715758==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715758== 
+29.KO 30.OK 31.OK 
+category: X
+1.OK 2.KO 3.OK 4.OK 5.KO 6.KO 7.KO 8.OK 9.OK 10.OK 11.OK 12.OK 13.KO 14.KO 15.KO 16.KO 17.KO 18.KO 19.KO 20.KO 21.KO 22.KO 23.OK 24.KO 25.KO 26.KO 27.KO 28.KO ==1715798== Conditional jump or move depends on uninitialised value(s)
+==1715798==    at 0x40860B: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x4080BE: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x407885: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1715798==    by 0x405599: main (upperx_test.cpp:54)
+==1715798==  Uninitialised value was created by a stack allocation
+==1715798==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715798== 
+==1715798== Conditional jump or move depends on uninitialised value(s)
+==1715798==    at 0x40860B: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x4080BE: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x407885: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1715798==    by 0x405599: main (upperx_test.cpp:54)
+==1715798==  Uninitialised value was created by a stack allocation
+==1715798==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715798== 
+==1715798== Conditional jump or move depends on uninitialised value(s)
+==1715798==    at 0x40860B: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x4080BE: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x407885: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1715798==    by 0x405599: main (upperx_test.cpp:54)
+==1715798==  Uninitialised value was created by a stack allocation
+==1715798==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715798== 
+==1715798== Conditional jump or move depends on uninitialised value(s)
+==1715798==    at 0x40860B: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x4080BE: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x407885: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1715798==    by 0x405599: main (upperx_test.cpp:54)
+==1715798==  Uninitialised value was created by a stack allocation
+==1715798==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715798== 
+==1715798== Use of uninitialised value of size 8
+==1715798==    at 0x40862C: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x40861D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x4080BE: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==    by 0x408330: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/upperx_test)
+==1715798==  Uninitialised value was created by a stack allocation
+==1715798==    at 0x407564: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:38)
+==1715798== 
+29.KO 30.KO 31.KO 
+category: %
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 
+category: mix
+==1715824== Conditional jump or move depends on uninitialised value(s)
+==1715824==    at 0x4063EB: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x405E91: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x406180: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1715824==    by 0x40513D: main (mix_test.cpp:26)
+==1715824==  Uninitialised value was created by a stack allocation
+==1715824==    at 0x40517D: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:38)
+==1715824== 
+==1715824== Conditional jump or move depends on uninitialised value(s)
+==1715824==    at 0x4063EB: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4063FD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x405E91: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x406180: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1715824==    by 0x40513D: main (mix_test.cpp:26)
+==1715824==  Uninitialised value was created by a stack allocation
+==1715824==    at 0x40517D: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:38)
+==1715824== 
+==1715824== Conditional jump or move depends on uninitialised value(s)
+==1715824==    at 0x40645B: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x405F0E: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x406180: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1715824==    by 0x40513D: main (mix_test.cpp:26)
+==1715824==  Uninitialised value was created by a stack allocation
+==1715824==    at 0x40517D: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:38)
+==1715824== 
+==1715824== Conditional jump or move depends on uninitialised value(s)
+==1715824==    at 0x40645B: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x40646D: ft_putuphexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x405F0E: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x406180: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1715824==    by 0x40513D: main (mix_test.cpp:26)
+==1715824==  Uninitialised value was created by a stack allocation
+==1715824==    at 0x40517D: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:38)
+==1715824== 
+==1715824== Conditional jump or move depends on uninitialised value(s)
+==1715824==    at 0x4063EB: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4063FD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4063FD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x405E91: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x406180: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1715824==    by 0x40513D: main (mix_test.cpp:26)
+==1715824==  Uninitialised value was created by a stack allocation
+==1715824==    at 0x40517D: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:38)
+==1715824== 
+==1715824== Conditional jump or move depends on uninitialised value(s)
+==1715824==    at 0x4063EB: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4063FD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4063FD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4063FD: ft_putlowhexa (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x405E91: ft_print_sth (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x406180: ft_printf (in /home/edelanno/francinette/temp/printf/printfTester/mix_test)
+==1715824==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1715824==    by 0x40513D: main (mix_test.cpp:26)
+==1715824==  Uninitialised value was created by a stack allocation
+==1715824==    at 0x40517D: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:38)
+==1715824== 
+1.KO 
+
+Errors found:
+For /home/edelanno/francinette/tests/printf/printfTester/tests/p_test.cpp:
+25:     TEST(1, print(" %p ", -1));
+26:     TEST(2, print(" %p ", 1));
+27:     TEST(3, print(" %p ", 15));
+28:     TEST(4, print(" %p ", 16));
+29:     TEST(5, print(" %p ", 17));
+30:     TEST(6, print(" %p %p ", LONG_MIN, LONG_MAX));
+31:     TEST(7, print(" %p %p ", INT_MIN, INT_MAX));
+32:     TEST(8, print(" %p %p ", ULONG_MAX, -ULONG_MAX));
+
+For /home/edelanno/francinette/tests/printf/printfTester/tests/x_test.cpp:
+48:     TEST(24, print(" %x ", LONG_MAX));
+49:     TEST(25, print(" %x ", LONG_MIN));
+51:     TEST(27, print(" %x ", ULONG_MAX));
+52:     TEST(28, print(" %x ", 9223372036854775807LL));
+53:     TEST(29, print(" %x %x %x %x %x %x %x", INT_MAX, INT_MIN, LONG_MAX, 
+LONG_MIN, ULONG_MAX, 0, -42));
+
+For /home/edelanno/francinette/tests/printf/printfTester/tests/upperx_test.cpp:
+26:     TEST(2, print(" %X ", -1));
+29:     TEST(5, print(" %X ", 10));
+...
+
+File too large. To see full report open: 
+/home/edelanno/francinette/temp/printf/printfTester/errors.log
+
+ℹ Running tests: fsoares (my own tests)
+Want some more thorough tests? run 'francinette --strict'.
+
+Summary: no bonus
+
+Failed tests: printfTester
+➜  printflucas git:(main) 
