@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:52:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/12 09:53:04 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/15 09:25:44 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,18 @@ int	ft_findset(char c, char *set)
 
 char	ft_symb(const char *arg, int i)
 {
-	if (arg[i] && (arg[i] != '\%'))
+	if (arg[i] && (arg[i] != '%'))
 		return ('c');
-	if ((arg[i] == '\%') && (ft_findset(arg[i + 1], "cspdiuxX\%") == 1))
+	if ((arg[i] == '%') && (ft_findset(arg[i + 1], "cspdiuxX%") == 1))
 		return (arg[i + 1]);
 	return ('c');
 }
 
 int	ft_isvar(const char *s, int i)
 {
-	if (s[i] == '\%')
+	if (s[i] == '%')
 	{
-		if (s[i + 1] && (ft_findset(s[i + 1], "cspdiuxX\%") == 1))
+		if (s[i + 1] && (ft_findset(s[i + 1], "cspdiuxX%") == 1))
 			return (1);
 	}
 	return (0);
@@ -61,11 +61,11 @@ int	ft_print_sth(va_list elem, char symb)
 	if (symb == 'u')
 		ret = ft_putundec(va_arg(elem, unsigned int));
 	if (symb == 'x')
-		ret = ft_putlowhexa(va_arg(elem, unsigned int));
+		ret = ft_putlowhexa(va_arg(elem, unsigned long));
 	if (symb == 'X')
-		ret = ft_putuphexa(va_arg(elem, unsigned int));
-	if (symb == '\%')
-		ret = ft_putchar('\%');
+		ret = ft_putuphexa(va_arg(elem, unsigned long));
+	if (symb == '%')
+		ret = ft_putchar('%');
 	return (ret);
 }
 
@@ -95,6 +95,7 @@ int	ft_printf(const char *arg, ...)
 	va_end(elem);
 	return (ret);
 }
+
 /*
 #include <stdio.h>
 #include <limits.h>
@@ -103,12 +104,12 @@ int	main(void)
 {
 	void	*Test = (void *)123456;
 	printf("Test single character c\n\n");
-	printf(" %d\n",ft_printf("ft_printf  %c", 'a'));
-	printf(" %d\n",printf("print_f    %c", 'a'));
+	printf(" %d\n",ft_printf("ft_printf  %c", '%'));
+	printf(" %d\n",printf("print_f    %c", '%'));
 	printf("\n\n");
 	printf("Test string s\n\n");
-	printf(" %d\n",ft_printf("ft_printf  %s", "Test"));
-	printf(" %d\n",printf("print_f    %s", "Test"));
+	printf(" %d\n",ft_printf("ft_printf  %s", "%%Test"));
+	printf(" %d\n",printf("print_f    %s", "%%Test"));
 	printf("\n\n");
 	printf("Test adresse p\n\n");
 	printf(" %d\n",ft_printf("ft_printf  %p", Test));
@@ -135,8 +136,8 @@ int	main(void)
 	printf(" %d\n",printf("print_f    %X", 44));
 	printf("\n\n");
 	printf("Test percent %%\n\n");
-	printf(" %d\n",ft_printf("ft_printf  %%"));
-	printf(" %d\n",printf("print_f    %%"));
+	printf(" %d\n",ft_printf("ft_printf  %%%%"));
+	printf(" %d\n",printf("print_f    %%%%"));
 	printf("\n\n");
 	printf("Tests divers \n\n");
 	printf(" %d\n",ft_printf("ft_printf  Te%%st%s%p%p\n", "Jeux", NULL, Test));
